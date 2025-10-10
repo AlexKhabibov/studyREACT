@@ -3,6 +3,7 @@ import ClickerLess10 from './components/CliclerLess10'
 import Counter from './components/Counter'
 import Form from './components/Form'
 import InputLength from './components/InputLength'
+import TasksList from './components/TaskList'
 import TimefixClicker from './components/TimefixClicker'
 import Timer from './components/Timer'
 import TodoList from './components/TodoList'
@@ -24,6 +25,8 @@ function App() {
       <InputLength />
       <hr />
       <TimefixClicker />
+      <hr />
+      <TasksList />
       <hr />
 
     </>
