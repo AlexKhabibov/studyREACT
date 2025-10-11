@@ -7,6 +7,7 @@ import TasksList from './components/TaskList'
 import TimefixClicker from './components/TimefixClicker'
 import Timer from './components/Timer'
 import TodoList from './components/TodoList'
+import UsersList from './components/UsersList'
 
 function App() {
 
@@ -27,6 +28,8 @@ function App() {
       <TimefixClicker />
       <hr />
       <TasksList />
+      <hr />
+      <UsersList />
       <hr />
 
     </>
