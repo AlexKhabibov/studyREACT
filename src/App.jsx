@@ -2,6 +2,7 @@ import './App.css'
 import ClickerLess10 from './components/CliclerLess10'
 import Counter from './components/Counter'
 import Form from './components/Form'
+import FormValidation from './components/FormVal'
 import InputLength from './components/InputLength'
 import TasksList from './components/TaskList'
 import TimefixClicker from './components/TimefixClicker'
@@ -30,6 +31,8 @@ function App() {
       <TasksList />
       <hr />
       <UsersList />
+      <hr />
+      <FormValidation />
       <hr />
 
     </>
