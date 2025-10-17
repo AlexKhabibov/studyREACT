@@ -1,4 +1,5 @@
 import './App.css'
+import Accordeon from './components/Accordeon'
 import ClickerLess10 from './components/CliclerLess10'
 import Counter from './components/Counter'
 import Form from './components/Form'
@@ -33,6 +34,8 @@ function App() {
       <UsersList />
       <hr />
       <FormValidation />
+      <hr />
+      <Accordeon />
       <hr />
 
     </>
