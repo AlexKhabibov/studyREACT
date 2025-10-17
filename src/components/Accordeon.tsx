@@ -1,29 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-function Accordeon() {
+interface Section {
+    id: number;
+    title: string;
+    content: string;
+}
 
-    interface Section {
-        id: number;
-        title: string;
-        content: string;
-    };
+const sections: Section[] = [
+    { id: 1, title: "Что такое React?", content: "React — это библиотека для создания пользовательских интерфейсов." },
+    { id: 2, title: "Что делает useState?", content: "useState хранит состояние внутри функционального компонента." },
+    { id: 3, title: "Что делает useEffect?", content: "useEffect выполняет побочные эффекты, например загрузку данных." },
+];
 
-    const sections: Section[] = [
-        { id: 1, title: "Заголовок 1", content: "Content 1" },
-        { id: 2, title: "Заголовок 2", content: "Content 2" },
-        { id: 3, title: "Заголовок 3", content: "Content 3" },
-    ];
-
+function Accordion() {
     const [openId, setOpenId] = useState<number | null>(null);
-
-
-    useEffect(() => {
-        if (openId !== null) {
-            localStorage.setItem("openSectionId", openId.toString());
-        } else {
-            localStorage.removeItem("openSectionId");
-        }
-    }, [openId]);
 
     const toggleSection = (id: number) => {
         setOpenId(prev => (prev === id ? null : id));
@@ -63,4 +53,4 @@ function Accordeon() {
     );
 }
 
-export default Accordeon;
+export default Accordion;
