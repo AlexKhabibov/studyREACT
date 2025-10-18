@@ -1,10 +1,14 @@
+import TrackDetail from "./TrackDetail";
 import { ITrack } from "./types";
 
-function TrackItem({ id, title }: ITrack) {
+function TrackItem({ id, title, details }: ITrack) {
     return (
-        <li>
-            {id} - {title}
-        </li>
+        <div>
+            <li>
+                {id} - <b>{title}</b>
+            </li>
+            <TrackDetail details={details} />
+        </div>
     );
 }
 
