@@ -9,12 +9,15 @@ import TasksList from './components/TaskList'
 import TimefixClicker from './components/TimefixClicker'
 import Timer from './components/Timer'
 import TodoList from './components/TodoList'
+import TracksListApp from './components/TrackList/TracksListApp'
 import UsersList from './components/UsersList'
 
 function App() {
 
   return (
     <>
+      <TracksListApp />
+      <hr />
       <Counter />
       <hr />
       <Form />

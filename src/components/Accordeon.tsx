@@ -13,6 +13,7 @@ const sections: Section[] = [
 ];
 
 function Accordion() {
+
     const [openId, setOpenId] = useState<number | null>(null);
 
     const toggleSection = (id: number) => {
@@ -20,36 +21,39 @@ function Accordion() {
     };
 
     return (
-        <div style={{ width: "400px", margin: "0 auto" }}>
-            {sections.map(section => (
-                <div
-                    key={section.id}
-                    style={{
-                        border: "1px solid gray",
-                        marginBottom: "8px",
-                        borderRadius: "6px",
-                    }}
-                >
+        <>
+            <div style={{ width: "400px", margin: "0 auto" }}>
+                {sections.map(section => (
                     <div
-                        onClick={() => toggleSection(section.id)}
+                        key={section.id}
                         style={{
-                            background: "grey",
-                            padding: "10px",
-                            cursor: "pointer",
-                            fontWeight: "bold",
+                            border: "1px solid gray",
+                            marginBottom: "8px",
+                            borderRadius: "6px",
                         }}
                     >
-                        {section.title}
-                    </div>
-
-                    {openId === section.id && (
-                        <div style={{ padding: "10px", background: "grey" }}>
-                            {section.content}
+                        <div
+                            onClick={() => toggleSection(section.id)}
+                            style={{
+                                background: "grey",
+                                padding: "10px",
+                                cursor: "pointer",
+                                fontWeight: "bold",
+                            }}
+                        >
+                            {section.title}
                         </div>
-                    )}
-                </div>
-            ))}
-        </div>
+
+                        {openId === section.id && (
+                            <div style={{ padding: "10px", background: "grey" }}>
+                                {section.content}
+                            </div>
+                        )}
+
+                    </div>
+                ))}
+            </div>
+        </>
     );
 }
 
