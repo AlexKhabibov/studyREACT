@@ -1,13 +1,14 @@
 import { ITrack } from "./types";
 
-function TrackDetail({ details }: Partial<ITrack>) {
+function TrackDetail({ details, track }: Partial<ITrack>) {
 
-    if (!details) return <div>no track details</div>
+    if (!track) return <div>no track details</div>
 
     return (
-        <div>
-            {details}
-        </div>
+        <>
+            <div>{details}</div>
+            <div>{track ? "✅ Selected" : "❌ Not selected"}</div>
+        </>
     );
 }
 
