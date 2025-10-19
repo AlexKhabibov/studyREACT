@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import './Video.css'
 
-function Video(props) {
-    const { title, chName, img } = props;
+function VideoCard({ title, chName, img }) {
+
     const [likesCount, setLikesCount] = useState(0);
-    console.log(title);
 
     const increaseLikesbyOne = () => {
         setLikesCount(likesCount + 1);
@@ -23,4 +22,4 @@ function Video(props) {
     );
 }
 
-export default Video;
+export default VideoCard;
