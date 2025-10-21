@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Counter({ onFinish }) {
+function  Counter({ onFinish }) {
 
     const [value, setValue] = useState(0);
 

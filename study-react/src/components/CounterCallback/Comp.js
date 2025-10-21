@@ -6,14 +6,16 @@ function Comp() {
 
     const [component, setComponent] = useState('counter');
 
-    const hnadleFinish = () => {
-        setComponent('icon')
+    const handleFinish = () => { setComponent('icon') }
+
+    const handleReset = () => {
+        setComponent('counter');
     }
 
     return (
         <div>
-            {component === 'counter' && <Counter onFinish={hnadleFinish} />}
-            {component === 'icon' && <Icon />}
+            {component === 'counter' && <Counter onFinish={handleFinish} />}
+            {component === 'icon' && <Icon onReset={handleReset} />}
         </div>
     )
 }

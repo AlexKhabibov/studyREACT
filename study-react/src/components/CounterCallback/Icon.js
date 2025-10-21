@@ -1,6 +1,7 @@
-function Icon() {
+function Icon({ onReset }) {
     return (
-        <div style={{fontSize: '100px'}}>
+        <div onClick={onReset}
+            style={{ fontSize: '100px' }}>
             ✅
         </div>
     );
