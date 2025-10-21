@@ -21,13 +21,16 @@ import Toggle from './components/Toggle';
 import TestComp from './components/Test';
 import Box from './components/Box';
 import ListPageMain from './components/listPageApp/ListPageMain';
+import Comp from './components/CounterCallback/Comp';
 
 function App() {
 
   return (
     <>
+      <hr />
+      <Comp  />
+      <hr />
       <ListPageMain />
-
       <TodoList2 />
       <TemperatureConverter />
       <FormInput />
